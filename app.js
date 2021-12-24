@@ -4,8 +4,6 @@ const questionContainer = document.getElementById("question");
 const nextBtn = document.getElementById("next-btn");
 const paraEl = document.createElement("p");
 
-input.focus();
-
 let questionNumber = 0;
 
 const questions = [
@@ -32,6 +30,7 @@ function showNextQuestions() {
 window.addEventListener("keypress", (e) => {
   if (e.key === " ") {
     backDrop.style.transform = "translateY(-100%)";
+    input.focus();
   }
 });
 
