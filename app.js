@@ -62,6 +62,7 @@ nextBtn.addEventListener("click", () => {
     sendToDatabase(input.value);
     paraEl.innerText = "";
     input.value = "";
+    nextBtn.disabled = true;
     showNextQuestions();
   }
 });
