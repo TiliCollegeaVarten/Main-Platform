@@ -24,7 +24,7 @@
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.6)
     ),
-    url("/img/pexels-ylanite-koppens-796607.jpg") center/cover no-repeat fixed;
+    url("/img/resized.jpg") center/cover no-repeat fixed;
   transition: transform 1s linear;
   display: grid;
   place-items: center;
