@@ -5,33 +5,188 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
     <title>Sample Project</title>
   </head>
   <body>
-    <div class="back-drop" id="back-drop">
-      <div class="backdrop-contents">
-        <h1>Congragulations on clearing the preliminaries</h1>
-        <button class="backdrop-btn">Press Space</button>
+    <div class="curtain" id="curtain">
+      <div class="curtain-contents">
+        <p class="text-1">🎉Congragulations on clearing the preliminaries🎉</p>
+        <br />
+        <p class="text-2">📃Welcome to mains exam📃</p>
+        <br />
+        <p class="continue-text" id="space">press space to continue</p>
       </div>
     </div>
-    <div class="mains">
-      <header class="mains-header">
-        <h1>Event Name</h1>
-      </header>
-      <section class="section-center">
-        <article class="question" id="question">
-          <h1>Question</h1>
-        </article>
-        <article class="answer">
-          <textarea
-            id="input"
-            class="answer-input"
-            placeholder="Enter Your Answer...."
-          ></textarea>
-        </article>
-        <button class="next-btn" id="next-btn" disabled>Next</button>
-      </section>
+    <!-- loader -->
+    <div class="middle" id="loader">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+      <div class="bar bar4"></div>
+      <div class="bar bar5"></div>
+      <div class="bar bar6"></div>
+      <div class="bar bar7"></div>
+      <div class="bar bar8"></div>
     </div>
+    <!-- end of loader -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" id="navbar">
+      <div class="container">
+        <img src="./img/IMG-20211225-WA0045-removebg-preview.png" alt="logo" class="img-logo">
+        <a class="navbar-brand text-white">Clash Of Geeks</a>
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link border-left" id="open">Rules</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header id="home-section">
+      <div class="home-inner container">
+        <div class="row">
+          <div class="col-lg-8 d-none d-lg-block border-right border-dark">
+            <h1 class="display-4">
+              Welcome To your <strong>Mains Examination</strong>
+            </h1>
+            <p class="h4">Please fill the form and then proceed</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="card bg-primary text-center card-form ml-2">
+              <div class="card-body">
+                <p class="text-white">Please fill out this form to start</p>
+                <form>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="first-name"
+                      class="form-control form-control-lg"
+                      placeholder="First Name"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="last-name"
+                      class="form-control form-control-lg"
+                      placeholder="Last Name"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control form-control-lg"
+                      placeholder="Email"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="form-control form-control-lg"
+                      placeholder="Phone No."
+                      autocomplete="off"
+                    />
+                  </div>
+                  <input
+                    type="submit"
+                    value="Submit"
+                    class="btn btn-outline-light btn-block"
+                    id="submit-btn"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- clip path section -->
+    <div id="clip-path">
+      <div class="clip-path1"></div>
+      <div class="clip-path2"></div>
+      <div class="clip-path3"></div>
+      <div class="clip-path4"></div>
+      <div class="clip-path5"></div>
+    </div>
+    <!-- end of clip path section -->
+    <section id="exam-section">
+      <img src="./img/IMG-20211225-WA0045-removebg-preview.png" alt="bg-img" class="bg-img">
+      <div class="section-inner">
+        <div class="row">
+          <div class="col-sm-6 border-right border-dark">
+            <h1 class="question-header">Question</h1>
+            <p class="h5 question" id="question"></p>
+            <h1>Hint</h1>
+            <p class="hint h5" id="hint"></p>
+          </div>
+          <div class="col-sm-6">
+            <textarea
+              id="answer"
+              class="answer"
+              placeholder="Type your answer here..."
+            ></textarea>
+            <button
+              type="button"
+              id="next-btn"
+              class="btn btn-outline-primary"
+              disabled
+            >
+              Submit Answer
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="backdrop" id="backdrop"></div>
+    <div class="sidebar" id="sidebar">
+      <div class="container">
+        <div class="row">
+          <h1 class="text-white p-2"><u>Rules</u></h1>
+          <a class="text-white ml-auto p-3 h3 close" id="close">X</a>
+        </div>
+      </div>
+      <div class="row">
+        <ul>
+          <li class="text-white">rule 1</li>
+          <li class="text-white">rule 2</li>
+          <li class="text-white">rule 3</li>
+        </ul>
+      </div>
+    </div>
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./confetti.js"></script>
     <script src="./app.js"></script>
   </body>
-</html
+</html>
