@@ -4,6 +4,7 @@ import sqlite3
 
 app = FastAPI()
 app.mount("/site", staticfiles.StaticFiles(directory="site", html=True), name="site")
+app.mount("/img", staticfiles.StaticFiles(directory="img", html=True), name="img")
 
 
 @app.on_event("startup")
